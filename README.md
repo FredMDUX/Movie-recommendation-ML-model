@@ -1,26 +1,66 @@
-# Movie-recommendation-system
-A hybrid movie recommendation system using collaborative filtering and content-based filtering, built with Python, scikit-learn, and Surprise. Includes evaluation metrics and SHAP-based interpretability.
+# 🎬 Movie Recommendation System
 
-# Movie Recommendation System
+This project builds a hybrid movie recommendation system using collaborative filtering (user-based and item-based), content-based filtering (TF-IDF on genres), and a hybrid ensemble. The system is evaluated using RMSE, Precision@10, Recall@10, and SHAP-based interpretability.
 
-This repository contains code for building a hybrid movie recommendation system using:
+## 🚀 Features
 
-- User-based and item-based collaborative filtering (Surprise library)
-- Content-based filtering (TF-IDF on movie genres)
-- A hybrid model combining both approaches
-- Evaluation using RMSE, Precision@10, Recall@10
-- Interpretability using SHAP
+- Predicts user ratings using multiple recommendation algorithms
+- Recommends top-N movies with ranking and relevance metrics
+- Addresses cold-start problems through genre metadata
+- Visual analysis of results and feature importance (SHAP)
 
-## Files
+## 📁 Project Structure
+
 - `movie_recommendation_system.ipynb` – Main Colab notebook
-- `rating.csv`, `movie.csv`, etc. – MovieLens dataset files (if permitted)
-- `plots/` – Visuals like SHAP summary, evaluation charts
+- `data/` – Folder for dataset files (ratings.csv, movies.csv, etc.)
+- `plots/` – Visual output folder (charts, SHAP plots)
+- `README.md` – This documentation
 
-## Requirements
-- Python 3.10+
-- pandas, numpy, scikit-learn, surprise, shap, matplotlib, seaborn
+## 🛠️ Dependencies
 
-## How to Use
-1. Upload MovieLens CSV files to `/data` folder.
-2. Run all cells in the notebook.
-3. Visual outputs and recommendation results will be displayed.
+Ensure Python 3.10+ is installed. Required packages include:
+
+```bash
+pip install pandas numpy scikit-learn surprise shap matplotlib seaborn
+🧪 Setup & Usage
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/movie-recommendation-system.git
+cd movie-recommendation-system
+Download the dataset
+
+Place the following files in the data/ folder. Download from MovieLens 100K.
+
+ratings.csv
+
+movies.csv
+
+tags.csv
+
+genome_scores.csv
+
+genome_tags.csv
+
+links.csv
+
+## Run the notebook
+
+Open movie_recommendation_system.ipynb in Google Colab or Jupyter Notebook. Follow the step-by-step code to preprocess data, build models, evaluate, and visualize results.
+
+## 📊 Sample Outputs
+RMSE Comparison
+
+Precision vs Coverage
+
+SHAP Summary for Genre Features
+
+📌 Notes
+The runtime may be long due to dataset size and similarity computations.
+
+Consider exploring faster alternatives like LightFM, Faiss, or dimensionality reduction methods for production-scale deployment.
+
+📄 License
+This project is for academic and educational use only.
